@@ -23,11 +23,11 @@ jobs:
             az storage blob upload-batch --account-name azrsm --auth-mode key -d '$web' -s frontend/
 
 # I'm don't use Azure CDN/Frontdoor
-    - name: Purge CDN endpoint
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
+#    - name: Purge CDN endpoint
+#      uses: azure/CLI@v1
+#      with:
+#        inlineScript: |
+#           az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
 
   # Azure logout
     - name: logout
