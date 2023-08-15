@@ -20,7 +20,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name azrsm --auth-mode key -d '$web' -s frontend/
+            az storage blob upload-batch --overwrite --account-name azrsm --auth-mode key -d '$web' -s frontend/
 
 # I'm don't use Azure CDN/Frontdoor
 #    - name: Purge CDN endpoint
